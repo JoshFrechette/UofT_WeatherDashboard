@@ -20,26 +20,25 @@
 
     <div class="container">
         <div class = "row">
-            <div class = "col-2" id="search">
+            <div class = "col" id="search">
                 <div class="input-group">         
-                        <form id="weather-form">   
+                    <form id="weather-form">   
                         <label for="city-input">Search for a City:</label>
                         <input type="text" id="city-input">
-                        <button id="add-city"><span class="fa fa-search"></span></button>
+                        <button id="add-city" type="submit"><span class="fa fa-search"></span></button>
                     </form>
                 </div>
                 <!--<input id="add-city" type="button">-->
-              <div id="search-history"></div>
-
+                <div class="row" id="search-history"></div>
             </div>
 
-            <div class="current col" id="result">
+            <div class="col-9" id="result">
                 <div id="current">
-                    <h2 id="current-weather"></h2>
-                    <p id="current-temp">Temperature:</p>
-                    <p id="current-humid">Humidity:</p>
-                    <p id="current-windspd">Windspeed:</p>
-                    <p id="current-UV">UV Index:</p>
+                    <h2 id="current-weather"><span ></span></h2>
+                    <p>Temperature:<span id="current-temp"></span></p>
+                    <p>Humidity:<span id="current-humid"></span></p>
+                    <p>Windspeed:<span id="current-windspd"></span></p>
+                    <p>UV Index:</p><span id="current-UV"></span>
                 </div>
 
                 <div class="row" id="no-gutters">

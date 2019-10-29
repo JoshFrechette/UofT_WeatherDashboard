@@ -12,11 +12,26 @@ body{
 }
 
 .container {
-    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    justify-content: space-around;  
 }
 
 #search {
     padding-right: 10px;   
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+#search-history {  
+    flex-direction: column;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    width: 200px;    
+    margin-top: 10px;
+    margin-left: 5px;
 }
 
 #result{
@@ -56,10 +71,23 @@ body{
     display: inline-block;
 }
 
+.past-city {
+    text-align: left;
+    width: max-content;
+    text-decoration: none;
+    border: none;
+    color: black;
+    background-color: #FFFFFF;
+}
+
 #add-city {
-    float: right;
     color: #fff;
     background-color: blue;  
     border: 3px solid #3399ff;   
     border-radius: 2px; 
+}
+
+#current-UV {
+    color: #ffffff;
+    background-color: brown;
 }
