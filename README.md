@@ -1,9 +1,15 @@
 # WeatherDashboard
 Assignment 5 - UofT SCS Coding Bootcamp
 
+# Deployment Links
+
+https://github.com/TwistedPixels/WeatherDashboard.git
+
+https://twistedpixels.github.io/WeatherDashboard/
+
 Description
 
-* From the assignment REDME.md file
+* From the assignment README.md file
 
 # Unit 06 Server-Side APIs Homework: Weather Dashboard
 
@@ -146,5 +152,8 @@ You are required to submit the following:
 
 
 Project Breakdown
+
+# PseudoCode
+
 
 - 

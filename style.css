@@ -27,7 +27,7 @@ body{
 #search-history {  
     flex-direction: column;
     background-color: #ffffff;
-    border: 1px solid #000000;
+    /* border: 1px solid #000000; */
     border-radius: 4px;
     width: 200px;    
     margin-top: 10px;
@@ -40,12 +40,15 @@ body{
     margin-left: 20px;
 }
 
-#current {
+.weather-display {
     border: 1px solid  #f2f2f2;
     border-radius: 5px;
     padding-left: 10px;
 }
 
+#current {
+    display:inline;
+}
 #no-gutters {
     margin-right: 0;
     margin-left: 0;
@@ -68,7 +71,7 @@ body{
 }
 
 #weather-form{
-    display: inline-block;
+    display: inline;
 }
 
 .past-city {
