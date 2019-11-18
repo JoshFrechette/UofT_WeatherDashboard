@@ -18,32 +18,33 @@
     </header>
 
 
-    <div class="container">
-        <div class = "row">
-            <div class = "col-3" id="search">
+    <div class="container-fluid">
+        <div class = "row justify-content-middle">
+
+            <div class = "col-sm-3" id="search">
                 <div class="input-group">         
                     <form id="weather-form">   
                         <label for="city-input"><str>Search for a City:</str></label>
                         <input type="text" id="city-input">
-                        <button id="add-city" type="submit"><span class="fa fa-search"></span></button>
+                        <button id="add-city" type="submit" value="reset"><span class="fa fa-search"></span></button>
                     </form>
                 </div>
-                <!--<input id="add-city" type="button">-->
                 <div class="row" id="search-history"></div>
             </div>
 
-            <div class="col" id="result">
+            <div class="col-sm offset-sm-2" id="result">
                 <div class="weather-display">
                     <div id="current"></div>              
                     <div id="info-current"></div>
                 </div>
+
                 <div class="row" id="no-gutters">
                     <div class="forecast">
                         <div class="forecast-head"></div>
-                        <div class = "five-day"></div>
-                       
+                        <div class = "five-day"></div>                    
                     </div> 
                 </div>
+            <div class="col-sm-2"></div>
             </div>
         </div>        
     </div>

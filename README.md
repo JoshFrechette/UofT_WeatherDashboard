@@ -1,13 +1,30 @@
 # WeatherDashboard
 Assignment 5 - UofT SCS Coding Bootcamp
 
+# PseudoCode
+
+* User enters city name and clicks the submit button
+
+- City gets entered into an array to keep the sessions search history and create the appropriate buttons.
+- City gets passed through functions that run it through OpenWeatherAPI calls
+- Information returns, formatted to the proper positions and format on the position to the right.
+
 # Deployment Links
 
 https://github.com/TwistedPixels/WeatherDashboard.git
 
 https://twistedpixels.github.io/WeatherDashboard/
 
+# Usage
+
+Enter the name of the city you wish to look for and and click on the button.
+
+Your search will be saved as a button and the weather information will appear to the right.
+
+![Weather Dashboard Image](/assets/images/WeatherDashboardReadme.png)
+
 Description
+
 
 * From the assignment README.md file
 
@@ -153,7 +170,4 @@ You are required to submit the following:
 
 Project Breakdown
 
-# PseudoCode
 
-
-- 

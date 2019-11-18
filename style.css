@@ -24,10 +24,17 @@ body{
     margin-left: 10px;
 }
 
+.input-group {
+    display: inline;
+}
+
+#city-input {
+    background-color: #fff;
+}
+
 #search-history {  
     flex-direction: column;
     background-color: #ffffff;
-    /* border: 1px solid #000000; */
     border-radius: 4px;
     width: 200px;    
     margin-top: 10px;
@@ -36,7 +43,7 @@ body{
 
 #result{
     background-color: #ffffff;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 20px 5px;
     margin-left: 20px;
 }
 
@@ -58,11 +65,13 @@ body{
     flex-grow: 1;
     padding-top: 20px;
     padding-left: 10px;
-   
 }
 
-/* #day2, #day3, #day4, #day5, #day6 { */
-.col-2 {
+.five-day {
+    min-width: 50px;
+    max-height: fit-content;
+}
+.days {
     display: inline-block;
     padding: 5px 5px 5px 5px;  
     color: #ffffff;
@@ -93,5 +102,8 @@ body{
 
 #current-UV {
     color: #ffffff;
+    background-size: 120%;
     background-color: brown;
+    border: 5px solid  brown;
+    border-radius: 5px; 
 }
