@@ -29,7 +29,7 @@ Your search will be saved as a button and the weather information will appear to
 
 # Preview
 
-![Weather Dashboard Image](./assets/images/WDPreview.png)
+![Weather Dashboard Image](assets/WDPreview.png)
 
 # Portfolio
 
