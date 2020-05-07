@@ -11,9 +11,7 @@
 
 # Deployment Links
 
-https://github.com/TwistedPixels/WeatherDashboard.git
-
-https://twistedpixels.github.io/WeatherDashboard/
+https://joshfrechette.github.io/UofT_WeatherDashboard/
 
 # Preview
 
