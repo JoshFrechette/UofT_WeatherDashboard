@@ -7,6 +7,24 @@ As a traveler
 I want to see the weather outlook for multiple cities
 so that I can plan a trip accordingly
 
+# Overview
+
+This application used the [OpenWeather API](https://openweathermap.org/api) to retrieve data for cities and displays:
+
+  * City
+
+  * Date
+
+  * Icon image (visual representation of weather conditions)
+
+  * Temperature
+
+  * Humidity
+
+  * Wind speed
+
+  * UV index
+
 # User Directions
 
 * User enters city name and clicks the submit button.
