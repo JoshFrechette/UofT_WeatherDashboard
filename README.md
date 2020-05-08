@@ -1,5 +1,5 @@
 <h1 align="center">WeatherDashboard</h1>
-<p align="center">UofT SCS Coding Bootcamp | Assignment 5</p>
+<p align="center">UofT SCS Coding Bootcamp | Assignment 5 | lesson 06</p>
 
 # User Story
 
