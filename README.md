@@ -1,6 +1,12 @@
 <h1 align="center">WeatherDashboard</h1>
 <p align="center">UofT SCS Coding Bootcamp | Assignment 5</p>
 
+# User Story
+
+As a traveler
+I want to see the weather outlook for multiple cities
+so that I can plan a trip accordingly
+
 # User Directions
 
 * User enters city name and clicks the submit button.
