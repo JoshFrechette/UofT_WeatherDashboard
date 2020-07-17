@@ -15,15 +15,19 @@
 </head>
 
 <body>
-    <header>
+    <!-- <header>
         <h1>Weather Dashboard</h1>
-    </header>
+    </header> -->
 
 
     <div class="container-fluid">
         <div class="row justify-content-middle">
 
-            <div class="col-sm-3" id="search">
+            <div class="col-sm-2 sideNav" id="search">
+            
+                <header>
+                    <img src="./assets/WeatherDash.png" />
+                </header>
                 <div class="input-group">
                     <form id="weather-form">
                         <button id="add-city" type="submit" value="reset"><span class="fa fa-search"></span></button>
@@ -31,12 +35,16 @@
                     </form>
                 </div>
                 <div class="row" id="search-history"></div>
+
             </div>
 
-            <div class="col-sm offset-sm-2" id="result">
-                <div class="weather-display">
-                    <div id="current"></div>
-                    <div id="info-current"></div>
+            <div></div>
+            <div class="col-sm-8" id="result">
+                <div class="row" id="no-gutters">
+                    <div class="weather-display">
+                        <div id="current"></div>
+                        <div id="info-current"></div>
+                    </div>
                 </div>
 
                 <div class="row" id="no-gutters">
@@ -45,8 +53,8 @@
                         <div class="five-day"></div>
                     </div>
                 </div>
-                <div class="col-sm-2"></div>
             </div>
+
         </div>
     </div>
 
