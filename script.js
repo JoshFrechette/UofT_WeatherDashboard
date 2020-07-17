@@ -9,13 +9,12 @@ var long
 
 //============================= API Searches =============================================
 //======== The function that will changes the weather info with each city chosen =========
-function displayWeatherInfo(city) {//Display all weather info
-    $("#current").empty();
-    $(".five-day").empty();
-    $(".forecast-head").empty();
-    $("#city-input").empty();
 
-    console.log(city)
+function displayWeatherInfo(city) {//Display all weather info
+    
+    clearField();
+
+    console.log("display weather hit for ", city)
 
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + weatherKey;//Get the current weather 
     // console.log(queryURL + " is the OpenWeather City response for today's weather")
@@ -32,7 +31,7 @@ function displayWeatherInfo(city) {//Display all weather info
         var cityTempIconURL = "http://openweathermap.org/img/w/" + cityTempIcon + ".png";
         var cityHumidity = response.main.humidity;
         var cityWindSpeed = response.wind.speed;
-        $("#current").empty();//
+        // $("#current").empty();//
         var CityLat = lat;
         var CityLong = long;
         // console.log(city + CityLong + " and " + CityLat)
@@ -64,14 +63,9 @@ function displayWeatherInfo(city) {//Display all weather info
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        // console.log(response)
-        $(".five-day").empty();//
-        $(".forecast-head").empty();//
         $(".forecast-head")
-
         .append($("<h2>").text("5-Day Forecast:"))
         for (i = 0; i <= 4; i++) {
-            // console.log(i)
             var nextDay = moment().add(1 + i, 'days').format('DD/MM/YYYY');
             var cityIconForecast = response.list[i].weather[0].icon;
             var cityIconURLForecast = "http://openweathermap.org/img/w/" + cityIconForecast + ".png";
@@ -83,45 +77,55 @@ function displayWeatherInfo(city) {//Display all weather info
                     .append($("<img src=" + cityIconURLForecast + ">")) //add the weather icon
                     .append($("<p>").html("Temp: " + cityTempForecast + " °F"))//add the temperature
                     .append($("<p>").html("Humidity: " + cityHumidityForecast + "%")))//add the humidity
-            // console.log(nextDay + ", " + cityHumidityForecast + ", " + cityTempForecast)
-
         }
     });
-
-}
-
+};
 
 //Make the city search history buttons
-function renderButtons() {
-    var cityInitial = $("#city-input").val().trim();
-    var citySearch = cityInitial.charAt(0).toUpperCase() + cityInitial.substring(1);//Sets the the first character as a capital
-    if (cities.indexOf($("#city-input").val().trim()) === -1) {// Avoids repeat search history buttons
+function renderButtons(city) {
+    // var cityInitial = city
+    var citySearch = city.charAt(0).toUpperCase() + city.substring(1);//Sets the the first character as a capital
+
+    // Avoids repeat search history buttons
+    if (cities.indexOf(city) === -1) {
+
+        console.log(cities.indexOf(city), cities)
+
         $("#search-history").append($("<button>").addClass("past-city").attr("city-name", citySearch).text(citySearch))
         cities.push(citySearch);
-    }
 
-    $(".past-city").on("click", function () { //Button click function to advance to 
-        // console.log($(this).attr("city-name"))
+    } 
+
+    $(".past-city").unbind().on("click", function (e) { 
+        console.log(e)
+        e.preventDefault();
+        clearField();
         displayWeatherInfo($(this).attr("city-name"));
+        console.log("past city button hit", $(this).attr("city-name"))
     })
 }
 
-$("#add-city").on("click", function (event) {
-    event.preventDefault();
-    // var cityInput = $("#city-input").val().trim();
-    // var city = cityInput.charAt(0).toUppercase() + cityInput.substring(1);
-    var city = $("#city-input").val().trim();
-    displayWeatherInfo(city);
-    renderButtons();
 
-    // clearField(){
-    //     document.getElementById("city-input").value = "";
-    // }
 
-});
-
-function newFunction() {
-    // console.log("new function");
-    displayWeatherInfo();
+function clearField(){
+    $("#current").empty();
+    $(".five-day").empty();
+    $(".forecast-head").empty();
 }
 
+//Button 
+// $(".past-city").on("click", function (e) { 
+//     clearField();
+//     console.log(e)
+//     e.preventDefault();
+//     displayWeatherInfo($(this).attr("city-name"));
+//     console.log("past city button hit", $(this).attr("city-name"))
+// })
+
+$("#add-city").on("click", function (e) {
+    e.preventDefault();
+    var city = $("#city-input").val().trim();
+    displayWeatherInfo(city);
+    renderButtons(city);
+    document.getElementById("city-input").value = "";
+});
