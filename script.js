@@ -3,8 +3,8 @@ var cities = [];//An empty array to hold the city search history
 let weatherKey = "&units=imperial&APPID=4df9a8b74a9e64205192fa481c567a1b";
 let APIKey = "4df9a8b74a9e64205192fa481c567a1b";
 var forecastIndex = 0;
-var lat
-var long
+var lat;
+var long;
 
 
 //============================= API Searches =============================================
@@ -83,44 +83,27 @@ function displayWeatherInfo(city) {//Display all weather info
 
 //Make the city search history buttons
 function renderButtons(city) {
-    // var cityInitial = city
     var citySearch = city.charAt(0).toUpperCase() + city.substring(1);//Sets the the first character as a capital
 
     // Avoids repeat search history buttons
     if (cities.indexOf(city) === -1) {
 
-        console.log(cities.indexOf(city), cities)
-
         $("#search-history").append($("<button>").addClass("past-city").attr("city-name", citySearch).text(citySearch))
         cities.push(citySearch);
-
     } 
 
     $(".past-city").unbind().on("click", function (e) { 
-        console.log(e)
         e.preventDefault();
         clearField();
         displayWeatherInfo($(this).attr("city-name"));
-        console.log("past city button hit", $(this).attr("city-name"))
     })
 }
-
-
 
 function clearField(){
     $("#current").empty();
     $(".five-day").empty();
     $(".forecast-head").empty();
 }
-
-//Button 
-// $(".past-city").on("click", function (e) { 
-//     clearField();
-//     console.log(e)
-//     e.preventDefault();
-//     displayWeatherInfo($(this).attr("city-name"));
-//     console.log("past city button hit", $(this).attr("city-name"))
-// })
 
 $("#add-city").on("click", function (e) {
     e.preventDefault();
